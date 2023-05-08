@@ -288,18 +288,6 @@ def create_ami():
     return response
 
 
- def import_mgn():
-     client = boto3.client('mgn')
-
-     response = client.start_import(
-         clientToken='string',
-         s3BucketSource={
-             's3Bucket': 'import-mgn-129664017770',
-             's3Key': '2e1848e3-d0a6-4681-9dde-58bf6aaeedf4'
-         }
-     )
-
-
 def main() -> None:
     client = boto3.client('mgn')
 
